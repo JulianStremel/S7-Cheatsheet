@@ -1,0 +1,55 @@
+﻿<!-- AWP_In_Variable Name='"db2".data1' -->
+<!-- AWP_In_Variable Name='"db2".data2' -->
+<!-- AWP_In_Variable Name='"db2".data3' -->
+<!-- AWP_In_Variable Name='"db2".data4' -->
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>S7 user defined website pseudo API</title>
+		<meta http-equiv="Content-Language" content="en" >
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+		<meta http-equiv="Content-Script-Type" content="text/javascript" >
+		<link rel="stylesheet" type="text/css" href="stylesheet/style.css"/>
+		<script src="javascript/cpuinterface.js" content="text/javascript"></script>
+	</head>
+
+	<body>
+<!-- Header Line -->
+		<div id="header">
+			<h1>Example header</h1>
+		</div>
+<!-- Header Line End-->
+
+<!-- Data Area -->
+		<div id="page">
+            <div id="fromcpu"></div>
+                <h5>Data From CPU</h5>
+                <p id="data1_in">###</p>
+                <p id="data2_in">###</p>
+                <p id="data3_in">###</p>
+                <p id="data4_in">###</p>
+                <p><button onclick=pollData()>update values</button></p>
+            </div>
+            <div id="tocpu"></div>
+                <h5>Data to CPU</h5>
+                <p>data1 
+                    <input type="number" id="data1_out"/>
+                    <button onclick=send_data1()>Set</button>
+                </p>
+                <p>data2 
+                    <input type="number" id="data2_out"/>
+                    <button onclick=send_data2()>Set</button>
+                </p>
+                <p>data3 
+                    <input type="number" id="data3_out"/>
+                    <button onclick=send_data3()>Set</button>
+                </p>
+                <p>data4 
+                    <input type="number" id="data4_out"/>
+                    <button onclick=send_data4()>Set</button>
+                </p>
+            </div>
+        </div>
+    </body> 
+</html>
